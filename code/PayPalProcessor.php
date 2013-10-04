@@ -2,6 +2,10 @@
 
 class PayPalProcessor_Express extends PaymentProcessor {
 
+	private static $allowed_actions = array(
+		'complete'
+	);
+
 	public function capture($data) {
 
 		parent::capture($data);
